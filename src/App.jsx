@@ -11,7 +11,7 @@ function App() {
 
   return (
     <>
-      <div className="bg h-screen w-full object-cover">
+      <div className="bg h-screen w-full object-cover overflow-x-hidden">
         <Home />
       </div>
     </>

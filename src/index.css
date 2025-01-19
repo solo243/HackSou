@@ -12,4 +12,20 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+
+}
+
+@keyframes rotateInfinite {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate-infinite {
+  animation: rotateInfinite 3s linear infinite;
+  filter: blur(20px);
 }
