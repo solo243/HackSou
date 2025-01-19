@@ -6,3 +6,10 @@ body {
   font-family: "Montserrat", serif;
 
 }
+
+.bg {
+  background-image: url('./assets/bg.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
