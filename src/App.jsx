@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import Home from './Home'
 import CountdownTimer from './CTC'
+import CTC from './CTC'
 
 
 function App() {
@@ -11,7 +12,8 @@ function App() {
 
   return (
     <>
-      <Home />
+      <CTC />
+      {/* <Home /> */}
       {/* <CountdownTimer /> */}
     </>
   )
