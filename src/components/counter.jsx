@@ -208,8 +208,8 @@ const Counter = () => {
   const [remainingTime, setRemainingTime] = useState(null);
   const [isRunning, setIsRunning] = useState(false);
 
-  // Timer duration in milliseconds (24 hours)
-  const timerDuration = 12*60 * 60 * 1000; // 24 hours
+  //TODO: Timer duration in milliseconds (24 hours)
+  const timerDuration = 1 * 60 * 60 * 1000; // 24 hours
 
   useEffect(() => {
     axios.get(Url)
@@ -250,7 +250,7 @@ const Counter = () => {
     const minutes = Math.floor((time % (1000 * 60 * 60)) / (1000 * 60)); // Minutes
     const seconds = Math.floor((time % (1000 * 60)) / 1000); // Seconds
 
-    return `${hours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+    return `${hours.toString().padStart(2, '0')}h ${minutes.toString().padStart(2, '0')}m ${seconds.toString().padStart(2, '0')}s`;
   };
 
   const [hide, setHide] = useState(() => {
@@ -273,7 +273,7 @@ const Counter = () => {
 
   return (
     <div>
-      <h1 className="text-[140px] text-white font-semibold">
+      <h1 className="text-[80px] pt-10 text-white font-semibold">
         {remainingTime === null ? "24:00:00" : remainingTime > 0 ? formatTime(remainingTime) : "Time's up"}
       </h1>
       <button
