@@ -10,7 +10,7 @@ const Counter = () => {
 
 
     //TODO: Timer duration in milliseconds (24 hours)
-    const timerDuration = 1 * 60 * 60 * 1000; // 24 hours
+    const timerDuration = 24 * 60 * 60 * 1000; // 24 hours
 
     useEffect(() => {
         axios.get(Url)
