@@ -8,6 +8,7 @@ const HeroSection = () => {
   return (
     <div className="flex justify-center items-center flex-col gap-10 relative">
       <img src={heroImage} alt="" className=" w-[320px] pb-[-10px]" />
+      <Counter/>
       <img
         src={obj}
         alt=""
