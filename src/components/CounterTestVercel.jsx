@@ -73,7 +73,7 @@ const Counter = () => {
 
     return (
         <div>
-            <h1 className="text-[80px] pt-10 text-white font-semibold">
+            <h1 className="text-[101px] pt-5 text-white font-semibold">
                 {remainingTime === null ? "24:00:00" : remainingTime > 0 ? formatTime(remainingTime) : "Time's up"}
             </h1>
             <button

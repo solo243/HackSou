@@ -1,7 +1,6 @@
 import React from "react";
 import navbarImage1 from "../assets/soulogo.svg";
 import navbarImage2 from "../assets/Robo.svg";
-
 const Hello = () => {
   return (
     <>
