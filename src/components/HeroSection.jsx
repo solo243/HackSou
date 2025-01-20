@@ -1,7 +1,8 @@
 import React from "react";
 import heroImage from "../assets/bg_2.svg";
 import obj from "../assets/object.png";
-import Counter from "./Counter";
+import Counter from "./Test1";
+
 
 const HeroSection = () => {
   return (
