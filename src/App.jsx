@@ -1,17 +1,20 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 import "./App.css";
 import Home from "./Home";
-
+import SocialWall from "./components/SocialWall";
+import CountdownTimer from "./components/BackUp";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 function App() {
-  const [count, setCount] = useState(0);
+
 
   return (
-    <>
-      <div className="bg h-screen w-full object-cover overflow-x-hidden">
-        <Home />
-      </div>
-    </>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/wall" element={<SocialWall />} />
+      </Routes>
+    </Router>
   );
 }
 

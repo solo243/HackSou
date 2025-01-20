@@ -10,7 +10,6 @@ const HeroSection = () => {
     <div className="flex justify-center items-center flex-col gap-10 relative">
       <img src={BgFinal} alt="" className="flex items-center justify-center w-[490px] -mt-6" />
       <Counter />
-
       <img
         src={obj}
         alt=""

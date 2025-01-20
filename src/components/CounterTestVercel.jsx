@@ -10,7 +10,7 @@ const Counter = () => {
 
 
     //TODO: Timer duration in milliseconds (24 hours)
-    const timerDuration = 1 * 60 * 60 * 1000; // 24 hours
+    const timerDuration = 24 * 60 * 60 * 1000; // 24 hours
 
     useEffect(() => {
         axios.get(Url)
@@ -23,7 +23,6 @@ const Counter = () => {
 
 
 
-    const [RemainingTIme, setIsRemainingTime] = useState(true)
 
     useEffect(() => {
 
@@ -47,7 +46,7 @@ const Counter = () => {
     const handleStart = async () => {
         const response = await axios.post('https://countdownbaclendservice.vercel.app/api/start');
         setStartTime(new Date(response.data.startTime));
-console.log(response)
+        console.log(response)
         setIsRunning(true);
     };
 
@@ -94,9 +93,6 @@ console.log(response)
             <h1 className="text-[101px] pt-5 text-white font-semibold">
                 {remainingTime === null ? "24:00:00" : remainingTime > 0 ? formatTime(remainingTime) : "Time's up"}
             </h1>
-
-
-
             <button
                 className={`bg-purple-500 flex justify-between items-center mx-auto px-7 py-1 rounded-lg text-2xl mt-5 text-white uppercase font-semibold ${hide ? "hidden" : "block"}`}
                 onClick={handlePress}

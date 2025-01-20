@@ -7,12 +7,29 @@ body {
   /* font-family: 'Druk Wide Bold', sans-serif; */
 }
 
+.wall-notification-trial {
+  display: none;
+  visibility: hidden;
+}
+
 .bg {
   background-image: url('./assets/bg.svg');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
 
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+  /* Chrome, Safari, Edge */
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  /* Internet Explorer */
+  scrollbar-width: none;
+  /* Firefox */
 }
 
 @keyframes rotateInfinite {
