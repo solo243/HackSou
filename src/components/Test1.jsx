@@ -1,5 +1,5 @@
-// import React, { useEffect, useState } from "react";
-// import axios from 'axios';
+import React, { useEffect, useState } from "react";
+import axios from 'axios';
 
 // const Counter = () => {
 //   const Url = "https://countdownbaclendservice.vercel.app/api/timer";
@@ -199,8 +199,6 @@
 
 // export default Counter;
 
-import React, { useEffect, useState } from "react";
-import axios from 'axios';
 
 const Counter = () => {
   const Url = "https://countdownbaclendservice.vercel.app/api/timer";

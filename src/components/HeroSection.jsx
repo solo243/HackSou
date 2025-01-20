@@ -1,14 +1,13 @@
 import React from "react";
 import heroImage from "../assets/bg_2.svg";
 import obj from "../assets/object.png";
-import Counter from "./Test1";
+import Counter from "./CounterTestVercel";
 
 
 const HeroSection = () => {
   return (
     <div className="flex justify-center items-center flex-col gap-10 relative">
       <img src={heroImage} alt="" className=" w-[320px] pb-[-10px]" />
-      <Counter />
       <img
         src={obj}
         alt=""
