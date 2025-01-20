@@ -8,6 +8,7 @@ const Counter = () => {
     const [remainingTime, setRemainingTime] = useState(null);
     const [isRunning, setIsRunning] = useState(false);
 
+
     //TODO: Timer duration in milliseconds (24 hours)
     const timerDuration = 1 * 60 * 60 * 1000; // 24 hours
 
@@ -20,7 +21,12 @@ const Counter = () => {
             .catch(err => console.log(err));
     }, []);
 
+
+
+    const [RemainingTIme, setIsRemainingTime] = useState(true)
+
     useEffect(() => {
+
         if (startTime) {
             const interval = setInterval(() => {
                 const elapsed = new Date() - new Date(startTime);
@@ -41,6 +47,7 @@ const Counter = () => {
     const handleStart = async () => {
         const response = await axios.post('https://countdownbaclendservice.vercel.app/api/start');
         setStartTime(new Date(response.data.startTime));
+console.log(response)
         setIsRunning(true);
     };
 
@@ -70,17 +77,12 @@ const Counter = () => {
 
     const handlePress = () => {
 
-        if (remainingTime) {
-            setHide(true);
-        }
-
         setHide((prevHide) => {
             const newHide = !prevHide;
             localStorage.setItem("hide", JSON.stringify(newHide));
             if (remainingTime ? setHide(true) : handleStart())
                 return newHide;
         });
-
     }
 
     useEffect(() => {
@@ -92,15 +94,15 @@ const Counter = () => {
             <h1 className="text-[101px] pt-5 text-white font-semibold">
                 {remainingTime === null ? "24:00:00" : remainingTime > 0 ? formatTime(remainingTime) : "Time's up"}
             </h1>
-            {remainingTime ? null : (
-                <button
-                    className={`bg-purple-500 flex justify-between items-center mx-auto px-7 py-1 rounded-lg text-2xl mt-5 text-white uppercase font-semibold ${hide ? "hidden" : "block"}`}
-                    onClick={handlePress}
-                >
-                    Start
-                </button>
-            )}
 
+
+
+            <button
+                className={`bg-purple-500 flex justify-between items-center mx-auto px-7 py-1 rounded-lg text-2xl mt-5 text-white uppercase font-semibold ${hide ? "hidden" : "block"}`}
+                onClick={handlePress}
+            >
+                Start
+            </button>
         </div>
     );
 };
